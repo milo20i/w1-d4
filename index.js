@@ -51,7 +51,15 @@ Write a function "boundary" which accept an integer n and returns true if n is w
 
 /* WRITE YOUR CODE HERE */
 
-
+function boundary(n) {
+  if ((n > 20 && n <= 100) || n === 400) {
+    return true;
+  } else {
+    return false;
+  }
+}
+//const boundary = (n) => ((n > 20 && n <= 100) || n === 400 ? true : false);
+console.log(boundary(3));
 
 
 
@@ -63,6 +71,17 @@ It should add the word "Strive" in front of the given string, but if the given s
 /* WRITE YOUR CODE HERE */
 
 
+function strivify(str) {
+  if (str.startsWith("Strive")) {
+    return str;
+  } else {
+    return "Strive " + str;
+  }
+}
+//const strivify = (str) => (str.startsWith("Strive") ? str : "Strive " + str);
+console.log(strivify("Strivers"));
+
+
 
 /* EXERCISE 6
 Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
@@ -70,6 +89,17 @@ HINT: Module Operator
 */
 
 /* WRITE YOUR CODE HERE */
+
+function check3and7(n) {
+  if (n >= 0 && (n % 3 === 0 || n % 7 === 0)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+// const check3and7 = (n) =>
+//   n >= 0 && (n % 3 === 0 || n % 7 === 0) ? true : false;
+console.log(check3and7(20));
 
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
@@ -101,6 +131,13 @@ Write a function "cutString" to create a new string without the first and last c
 */
 
 /* WRITE YOUR CODE HERE */
+
+
+function cutString(str) {
+  return str.slice(1, str.length - 1);
+}
+console.log(cutString("hello"));
+
 
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
